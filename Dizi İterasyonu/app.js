@@ -76,3 +76,11 @@ const upperName = names.map((name) => name.toLocaleUpperCase());
 
 console.log(names);
 console.log(upperName);
+
+//! ************* filter() *************
+//? It makes same thing with map() except it can return specific items
+
+const salaries = [5500, 8000, 6500, 9000, 10000, 150000, 25000];
+
+const hugeSalaries = salaries.filter((salary) => salary >= 10_000);
+console.log(hugeSalaries);
