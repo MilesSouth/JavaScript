@@ -51,9 +51,9 @@ const findStudents = (name) => {
     //   return counter;
 
     student === name && counter++; //! "short circuit" condition state
-    return counter === 0
-      ? `${name} can not be found`
-      : `${counter} results found with name ${nameInput}`;
   }
+  return counter === 0
+    ? `${name} can not be found`
+    : `${counter} results found with name ${nameInput}`;
 };
-console.log(findStudents(nameInput));
+console.log(findStudents(nameInput.toLowerCase()));
