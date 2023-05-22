@@ -39,21 +39,40 @@ for (let i of grades) {
 console.log(`ORTALAMA: ${(sumOfGrades / grades.length).toFixed(2)}`);
 
 const students = ["ahmet", "mehmet", "ali", "veli", "mehmet", "miles", "selim"];
-const nameInput = prompt("Type the name that you are looking for:");
+// const nameInput = prompt("Type the name that you are looking for:");
 
-const findStudents = (name) => {
-  let counter = 0;
-  for (let student of students) {
-    //     if (student === name) {
-    //       counter += 1;
-    //     }
-    //   }
-    //   return counter;
+// const findStudents = (name) => {
+//   let counter = 0;
+//   for (let student of students) {
+//     //     if (student === name) {
+//     //       counter += 1;
+//     //     }
+//     //   }
+//     //   return counter;
 
-    student === name && counter++; //! "short circuit" condition state
-  }
-  return counter === 0
-    ? `${name} can not be found`
-    : `${counter} results found with name ${nameInput}`;
-};
-console.log(findStudents(nameInput.toLowerCase()));
+//     student === name && counter++; //! "short circuit" condition state
+//   }
+//   return counter === 0
+//     ? `${name} can not be found`
+//     : `${counter} results found with name ${nameInput}`;
+// };
+// console.log(findStudents(nameInput.toLowerCase()));
+
+//! ************** forEach() **************
+//? forEach is a void (empty) function which means doesn't return anything
+
+const prices = [150, 250, 300, 500];
+
+let sum = 0;
+prices.forEach((price) => (sum += price));
+console.log(sum);
+
+//! ************** map() **************
+//? It allows to return a copy of or manipulated new array which means it returns a new array
+
+let names = ["ahmet", "mehmet", "ali", "veli", "mehmet", "miles", "selim"];
+
+const upperName = names.map((name) => name.toLocaleUpperCase());
+
+console.log(names);
+console.log(upperName);
